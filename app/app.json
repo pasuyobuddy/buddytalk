@@ -1,0 +1,64 @@
+{
+  "expo": {
+    "name": "BuddyTalk",
+    "slug": "buddytalk",
+    "scheme": "buddytalk",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.buddytalk.app"
+    },
+    "android": {
+      "package": "com.buddytalk.app",
+      "googleServicesFile": "./google-services.json",
+      "adaptiveIcon": {
+        "backgroundColor": "#0B4AE0",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "softwareKeyboardLayoutMode": "resize",
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-audio",
+        {
+          "microphonePermission": "Allow BuddyTalk to use the microphone to record voice messages."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow BuddyTalk to access your photos so you can send them.",
+          "cameraPermission": "Allow BuddyTalk to use the camera to take photos to send."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "color": "#0B4AE0",
+          "defaultChannel": "messages"
+        }
+      ],
+      "expo-image",
+      "expo-sharing",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 220,
+          "resizeMode": "contain",
+          "backgroundColor": "#0B4AE0"
+        }
+      ]
+    ]
+  }
+}
